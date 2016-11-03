@@ -26,14 +26,14 @@ ACM XXX-X-XXXX-XXXX-X/XX/XX\\
 % Paper metadata (use plain text, for PDF inclusion and later
 % re-using, if desired).  Use \emtpyauthor when submitting for review
 % so you remain anonymous.
-\def\plaintitle{Robot Skin: A Cloth Interface for Expressive Music Control}
+\def\plaintitle{Musical Skin: A Fabric Interface for Expressive Interaction}
   \def\plainauthor{First Author, Second Author, Third Author}
 \def\emptyauthor{}
 \def\plainkeywords{Authors' choice; of terms; separated; by
   semicolons; include commas, within terms only; required.}
 \def\plaingeneralterms{Documentation, Standardization}
 
-\title{Robot Skin: A Cloth Interface for Expressive Music Control}
+\title{Musical Skin: A Cloth Interface for Expressive Music Control}
 
 \numberofauthors{3}
 % Notice how author names are alternately typesetted to appear ordered
@@ -107,91 +107,51 @@ ACM XXX-X-XXXX-XXXX-X/XX/XX\\
 
 
 \section{Introduction}
+We preset an art installation consisting of three soft, malleable fabric instruments that users can freely manipulate to play music. Our instruments can be draped over objects, worn, folded, pulled, bent, squished and freely manipulated to produce sound. If worn draped over the body – as a scarf, cape, skirt, bracelet – interesting feedback modalities emerge. The users feel the tactile properties of the fabric in their fingertips, while at the same time feeling the pressure and taps of the fingers through their body. Additionally percussive hits, tones and pads fill the room with sound, leading to a multisensory experience involving the entire body.
+
+We are currently bombarded with advertisement telling us to buy the next wearable gadget to be fitter, happier, more productive. However, these devices are typically rigid both in their form and their expression. Their rigid form does not conform to the bodies soft and dynamic shapes, while their functions are typically constrained by a world view focused on productivity and optimization
+
+Like the wearable technologies currently pushed by large companies, our fabric can also be worn, but instead of helping us to reach our next goal faster and more efficiently, our fabric invites us to rest and explore our bodies. As it is soft it can conform to the shape of the body in different ways, by manipulating the material draped over our bodies, we explore ourselves, while creating an audible, shared musical experience. We designed our fabric for pleasure and self-expression as a statement opposing a view of uniquitious computing that turns us into productivity machines.
+
+We present three fabric instruments, with different functions. These mimic the typical composition of a modern pop band. One fabric is an imitation of a drum kit, enabling users to create distinct beats and one-shot sounds by tapping it. Another represents a lead instrument. Touching it creates distinct tones. Depending on the touch the sound spectrum and pitch of the tone changes allowing users to play haunting melodies on it. A third fabric instrument represents the harmonics section. Throughout the canvas different chords and soundscapes can be explored, creating a backdrop for the other two instruments to explore. These three instruments will be freely accessible to all visitors during the exhibit. As they are very robust, no special training or instruction is required for visitors to explore them.
 
 
-\subsection{What was done?}
-This paper presents a soft, malleable, canvas, musical controller/instrument
+
+\section{Related Work}
+Electronic textiles have recently received a significant amount of attention with the publication of public Jacquard \cite{jacquard}, however e-textiles and soft circuitry have a much longer history. 
+
+Joanna Berzowska published a fabric that could slowly change color in 2004 [1] , followed up by investigations into wearable e-textile fashion [2]
+
+Hannah Perner Wilson, published an overview of soft fabric sensors in 2009 [6] and has since expanded on that work [5] and has been maintaining an archive of soft textile sensors (http://www.kobakant.at/DIY/)
+
+Similar resistive sensing solutions to those in our instrument have been explored by David Holman  [3,4].
+
+There are also several two-dimensional keyboard projects, or ‘harmonic keyboards’ that are similar in layout to our own instruments \cite{lambdoma, seaboard, linnstrument, omnichord}. 
+
+\section{History}
+The technology used in our textile instruments is based on work by Maurin Donneaud. Starting in 2005 Donneaud was researching the use of textiles as an intuitive way of interact with computers. From the beginning the aim was to develop technologies with artistic applications: playing music, creating interactive visualizations etc. To achieve this, the tactile properties and affordances of the interface were a primary focus. 
+
+Donneauds sensor is the result of a reflection on the composition and the interpretation of electronic music. A crossover between the world of  weaving and electronics. Donneaud opted to use textiles, to give a sensual and intuitive dimension to controllers used to play electronic music.  Beyond the musical applications, this textile sensor acts as an artificial skin which can provide objects with a sense of touch. 
+
+The other inspiration for this installation is TapMe, a wearable percussive kit designed by Cedric Honnet. Designed in Paris in 2011, TapMe supports beatboxers and rappers expand their expressivity by amplifying body percussion. A performer wearing TapMe can create different beats and drum hits by hitting thin drum-triggers worn on their body.
 
 
-Transforming textiles into an intuitive way to interact with computers. This project is part of an electronic textiles research on HCI gesture interaction that was started in 2005.
-From the beginning this project stimulates the development of technologies in artistic use cases : playing music, combine graphics and sound, imagine objects that can have tactile properties, etc. Using a fabric to sense the touch is now possible with this eTextile matrix sensor that includes conductive fibers and a layer of piezoresistive textile. Made of conductive textile shaped in rows and columns fused onto a basic cotton fabric, this matrix is designed to be easy to make. To allow pressure measurement, a 20Kohm Eeonyx piezoresistive fabric is added in between the e-textile conductive matrix. On the software side we can visualize a representation of the eTextile matrix sensor that shows the pressure points and their positions on the virtual fabric surface. This 3D real time model analyses the touch to trigger OSC messages that can be used in audio application such as PureData, SuperCollider, etc.
 
 
-\subsection{What is the (artistic) problem, or previously unfulfilled desire, that is addressed in this work?}
-Current wearables are focused on visual aesthetics or functions, they do not address other dimensions of experience (touch, sound, smell etc.)
-Current music devices are hard and rigid, with new materials emerging, we now have a desire for soft, malleable input.
 
 
-\subsection{Why is this relevant? Why should the reader care?}
-With technology becoming ubiquitous, it is shaping our bodies, our culture, our lives more and more. We need to design technologies for pleasure and expression rather than for productivity, if we in the future wish to lead pleasure full lives, rather than becoming productivity machines.
 
 
-\subsection{What are other ways of solving your problem, addressing the unfulfilled desire? What did you not do and why? What did others do?}
-
-This could just be half a paragraph or a sentence.
-Here we can speak of the restricted scale of the sensor, originally the idea was to make a much larger interactive area to give a gesture dimension to musical interpretation.
-We can also talk about the idea of designing a material as easy to work with as a traditional textile.
 
 
-\subsection{How does what you did address the problem, the unfulfilled desire?}
-This should compliment paragraph 2
-
-
-\subsection{What is your contribution}
-This can be a list or a sentence. You should state as clearly as possible what you are contributing to the conference/to the world. You have a two-part contribution:
-- A soft instrument for artistic expression
-- A method of creating this instrument
-Related Work
-Should be three or four paragraphs, I think
-
-
-\subsection{Conceptually related work}
-Hedonic/Soft/Wearable/Whatever you want to associate yourself with
-Mimu Gloves: \cite{mimu}
-
-
-\subsection{Technologically related work}
-Jacquard: \cite{jacquard}
-
-
-\subsection{Soft input devices / Material Sensors}
-Kobakant stuff
-
-
-\subsection{Related musical input devices/instruments}
-There are several two-dimensional keyboard projects, this type of keyboard is referred to as 'harmonic keyboard', here are a few references: \cite{lambdoma}, \cite{seaboard}, \cite{linnstrument}, \cite{omnichord}.
-The Omnichord is an instrument which offers a musical games that we want to adapt to the textile...
-
-
-\section{Motivation / Discussion}
-
-This is probably the hardest section, and should probably be written by Maurin. Why does he do what he does?
-
-
-\subsection{Why did you build it? (what were the desires that needed to be fulfilled?)}
-This textile sensor is the result of a reflection on the composition and the interpretation of electronic music. Result of a meeting between the world of weaving and electronics, I decided to develop this interface in textile in order to give a sensitive and intuitive dimension to controllers used to play electronic music.
-Beyond the musical application, this textile sensor is a kind of artificial skin which give the "sense of touch" to objects. This technology may be used in a multitude of application fields such as connected objects, home automation, toys for children, wearable computing, etc.
-
-
-\subsection{What is the history of this device?}
-Elaborated in 2005 during my studies at the National School of Industrial Design (ENSCI - Paris), the first version of this textile interface only allowed to locate a single point of contact on the textile surface. In 2007 the project was oriented towards the development of a capacitive solution [using mixed digital/analog SoC - FPGA/FPAA] allowing to augment the sensitive faculties of the sensor, unfortunately undertaken developments have led us to abandon this too complex orientation [noise processing being a serious problem in wearable]. In 2014, in the Schmiede residence in Hallein (Austria), the project to found a new impetus [momentum?] through the development of a new piezoreistif textile based sensor. Today the development prospects multiply and the sensor adopts more and more the textile and digital qualities.
-
-
-\subsection{What else did you try?}
-This development is the result of a multitude of experiments in the field of electronic textiles. To develop each of the components of the sensor, many techniques had to be explored such as sewing, knitting, weaving, printing, etc. Several experiences were also made to pair this device to feedback solutions such as the video projection, lights in DMX control.
-
-
-\subsection{How does this instrument satisfy what you wanted to do?}
-In its current version, this interface offers a real solution for the composition and interpretation of electronic music. Robust, reactive and precise, it allows to trigger and control sounds...
 
 
 \section{Implementation}
 
 This textile sensor was  designed with open source collaborative development in mind. The hardware and software are entirely available and documented on \url{eTextile.org}.
 
-\subsection{Hardware}
 
-\subsubsection{Textile}
+\subsection{Textile}
 
 To detect position of touch points, the conductive textile is sliced both in vertical (x) and horizontal (y) strips.
 To measure the pressure intensities (z), the sensor uses conductive and piezoresistive textiles (see explanations in next subsection).
@@ -199,7 +159,7 @@ To measure the pressure intensities (z), the sensor uses conductive and piezores
 The piezoresistive textile used for now is made by Eeonyx \footnote{\url{http://eeonyx.com}}, its resistance of 20K ohms per square give is a good .
 
 
-\subsubsection{Electronics}
+\subsection{Electronics}
 
 Teensy board
 piezoresistivity picture
@@ -221,43 +181,46 @@ blob detection
 OSC control
 
 
-\section{Presentation}
-
-This section you write for the curator. Here you explain why the exhibit will be super cool if they pick you, and why they miss out on an amazing opportunity if they do not. You can edit/remove this if it gets accepted.
 
 
-\subsection{How will visitors experience this piece of art?}
-A performance? A demo? Maybe they can use it? Can anyone touch it? Will there be one or many?
-It will be possible to play with a small models and a large version, the idea is also to present several textile experimentations to properly see the research project as a whole.
 
 
-\subsection{Why does TEI want this}
-It will be fun, people can walk up and use it. Because there are many devices, people can make music together, it will facilitate discussion, it will demonstrate all the themes of the topic:
-\begin{itemize}
-\item new materialities and morphologies
-\item material as interface, instrument
-\item material as expressive interactions
-\item human perception and materiality
-\item bio-hybrid systems and interactions
-\item materials on body
-\end{itemize}
+\section{The Installation}
+The installation can be adopted to the constraints and opportunities of the space available to us. We envision an enclosed and dimmly lit space that contains our instruments.  Visiters will enter this space, and see our fabric instruments illuminated. The slight illumination of the fabric is intended to invite people to touch it. Once they do the room will light up softly. Each fabric instrument makes the room light up in different ways, each fabric instrument has its own colors.
+
+Visitors will discover that different instruments have different sound qualities. Some instruments will allow for expressive pressure based interactions triggering ambient pads and soundscapes, others can be played much like a a harmonic keyboard. Others again will trigger one-shot sounds, enabling percussive sounds and drumming. The soft malleable nature of the instruments allows for interesting exlorations not possible with conventional interfaces. For example, while a single touch typically would trigger a single sound or drum hit, if the instrument is folded, visitors can create custom polyphonic soundscapes.  Visitors can explore rubbing, rolling, crumbling to create chaotic or nondetermenistic sounds, or lay it out flat on an even surface for high-detail interaction.
+
+Our instruments can be draped over objects to create custom shaped instruments. We will bring a small number of wooden and cardboard shape-primitives that can be used for this purpose. An e-textile might be wrapped around a cylindrical object for providing a better grip, or layed out over a concave bowl to allow faster motion between different areas. Different shapes provide different musical affordances.
+
+Finally our instruments can be draped over bodies. This allows us to use our own bodies as instruments we can amplify body percussion with additional sounds, we can hug eachother to create soundscapes. The ability to drape these instruments over our body allows us to explore what interactive tattoos might feel like, or what other methods of input in soft fabric devices might feel like on the body. Finally it also allows visitors to explore interacting with interfaces on other peoples bodies. This type of expressive on-body input is something that we have very little experience with and this will allow visitors to improve their intuitive understanding of such potential technologies.
+
 
 
 \section{Limitations and Future Work}
+While the sensor has a very high resolution along the pressure axis, the spatial resolution is limited by the materials and sensing approach. The minimum spacing between individual sensing strips is constrained by the fabrics we use. We have not established the minimum size yet, but anticipate that there will be a material constrained limiting the resolution. Having said that, we have found that software interpolation workes quite well, as usually more than one sensing strip is touched at once. We hope to further improve the software filtering by to using trajectory prediction algorithms such as Kalman filters used in the LumoSpheres project \cite{lumospheres}.
 
-What does not work well yet?
-What are opportunities for research based upon the things you have not managed to do?
-What are opportunities for art, based on things you envision but did not do?
+The sensing approach also requires a large number of analog inputs on the microcontroller side. Currently the maximum resolution we can optain is a matrix of 16 by 16. When we create larger fabric, they do not have a higher resolution, as they still use the 16 by 16 sensing strip design. We are currenty working on a dedicated micro-controller circuit to improve this.
 
-For the electronic front end, we still work on a new version that will integrate a dedicated micro-controller circuit.
-On the software side, we still work on blob tracking, one of the directions we plan to explore is to use trajectory prediction algorithms such as Kalman filters such as in the LumoSpheres project \cite{lumospheres}.
-On the application side, different ways to add tactile or haptic feedback are explored. Previous similar experimentations such as BubbleWrap \cite{bubblewrap} or Shade Pixel \cite{shadepixel} were attempted but they're not wearable enough.
+Finally we are interested in adding actuation for haptic feedback. We have explored using previous experimentations such as BubbleWrap \cite{bubblewrap} or Shade Pixel \cite{shadepixel} however this added too much bulk to the fabric. While we still wish to add haptic feedback, more experimentation is required to decide on a best approach for this.
+
+
 
 
 \section{Conclusion}
-Summary of your submission document
-Repeat your contribution in full
-Repeat in two sentences why the curators should select your work
+We suggest an installtion consisting of three soft fabric instruments which can be used by visitors to control the environment in the form of adapting sound and lighting. The primary intent of the fabric instruments is for collaboratively making music while exploring shapes, materiality and bodies. This can be done by draping the fabric over objects, folding and deforming the fabric, or wearing it on the body. The e-textile itself is open source and improves over similar sensing applications both in terms of robustness and resolution. We are submitting this installation both because we believe it matches the theme of this years art exhibition, and because we believe it will be an engaging experience for people interested in the topics of TEI.
+
+
+
+THIS NEEDS TO GO, JUST TEMPORARILY ME SAVING REFERENCES
+
+1.	Joanna Berzowska. 2005. Memory rich clothing: second skins that communicate physical memory. Proceedings of the 5th conference on Creativity and Cognition: 32–40. https://doi.org/10.1145/1056224.1056231
+2.	Joanna Berzowska. 2006. Very Slowly Animating Textiles: Shimmering Flower. ACM SIGGRAPH. https://doi.org/http://dx.doi.org/10.1145/1186223.1186266
+3.	David Holman, Nicholas Fellion, and Roel Vertegaal. 2014. Sensing Touch Using Resistive Graphs. Proceedings of the 2014 conference on Designing interactive systems - DIS ’14: 195–198. https://doi.org/10.1145/2598510.2598552
+4.	David Holman and Roel Vertegaal. 2011. TactileTape : Low-Cost Touch Sensing on Curved Surfaces. Proceedings of the 24th annual ACM symposium adjunct on User interface software and technology: 17–18. https://doi.org/10.1145/2046396.2046406
+5.	Hannah Perner-Wilson and Leah Buechley. 2010. Making textile sensors from scratch. Proceedings of the fourth international conference on Tangible, embedded, and embodied interaction - TEI ’10: 349. https://doi.org/10.1145/1709886.1709972
+6.	Hannah Perner-Wilson and Mika Satomi. 2009. DIY Wearable Technology ISEA. 2009 Wearable Materialities Panel.
+
+
 
 % \balance{}
 
