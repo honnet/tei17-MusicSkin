@@ -187,7 +187,38 @@ In its current version, this interface offers a real solution for the compositio
 
 \section{Implementation}
 
-This is simply the technical implementation, probably Maurin and Cedric should write this, should be clear enough for non-experts to understand. If the motivation section is strong, this section can be skimmed over. I would try and not make this paper about the tech, but rather about Maurins vision and work.
+This textile sensor was  designed with open source collaborative development in mind. The hardware and software are entirely available and documented on \url{eTextile.org}.
+
+\subsection{Hardware}
+
+\subsubsection{Textile}
+
+To detect position of touch points, the conductive textile is sliced both in vertical (x) and horizontal (y) strips.
+To measure the pressure intensities (z), the sensor uses conductive and piezoresistive textiles (see explanations in next subsection).
+
+The piezoresistive textile used for now is made by Eeonyx \footnote{\url{http://eeonyx.com}}, its resistance of 20K ohms per square give is a good .
+
+
+\subsubsection{Electronics}
+
+Teensy board
+piezoresistivity picture
+voltage divider
+
+
+\subsection{Software}
+
+\subsubsection{Microcontroller}
+
+performs measures
+send data packets
+play music
+
+\subsubsection{Computer}
+
+visualization
+blob detection
+OSC control
 
 
 \section{Presentation}
