@@ -1,6 +1,6 @@
 # Simple Makefile for ACM SIGCHI LaTeX template
 
-TARGET=extended-abstract
+TARGET=tei17
 
 all: $(TARGET).pdf
 	evince $< &
@@ -10,7 +10,7 @@ all: $(TARGET).pdf
 	pdflatex $<
 
 # bbl file generation (change bib name if required)
-%.bbl: %.aux sample.bib
+%.bbl: %.aux %.bib
 	bibtex $<
 
 # pdf output
