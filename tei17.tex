@@ -127,6 +127,7 @@ Similar resistive sensing solutions to those in our instrument have been explore
 
 There are also several two-dimensional keyboard projects, or "harmonic keyboards" that are similar in layout to our own instruments \cite{lambdoma, seaboard, linnstrument, omnichord}.
 
+
 \section{History}
 The technology used in our textile instruments is based on the work by Maurin Donneaud\footnote{\url{http://Maurin.Donneaud.free.fr}}. Starting in 2005, he was researching the use of textiles as an intuitive way of interact with computers. From the beginning, the aim was to develop technologies with artistic applications: playing music, creating interactive visualizations etc. To achieve this, the tactile properties and affordances of the interface were a primary focus.
 
@@ -146,10 +147,16 @@ This textile sensor was designed with open source collaborative development in m
 
 \subsection{Textile}
 
-To detect position of touch points, the conductive textile is sliced both in vertical (x) and horizontal (y) strips.
+To detect position of touch points, the conductive textile is sliced both in vertical (x) and horizontal (y) strips (see Figure \ref{fig:inside}).
 To measure the pressure intensities (z), the sensor uses conductive and piezoresistive textiles (see explanations in next subsection).
 
-The piezoresistive textile used for now is made by Eeonyx\footnote{\url{http://eeonyx.com}}, its resistance of 20K ohms per square give is a good .
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\columnwidth]{figures/inside}
+    \caption{The vertical and horizontal stripes of conductive fabric.}\label{fig:inside}
+\end{figure}
+
+The piezoresistive textile used for now is made by Eeonyx\footnote{\url{http://eeonyx.com}}, its resistance of 20K ohms per square give a good pressure range and power consumption compare to other possible resistive layers such as velostat\footnote{\url{http://www.lessemf.com/plastic.html}}.
 
 
 \subsection{Electronics}
@@ -188,15 +195,12 @@ Our instruments can be draped over objects to create custom shaped instruments. 
 Finally our instruments can be draped over bodies. This allows us to use our own bodies as instruments, we can amplify body percussion with additional sounds, or we can hug each other to create soundscapes. The ability to drape these instruments over our body allows us to explore what interactive tattoos might feel like, or what other methods of input in soft fabric devices might feel like on the body. Finally it also allows visitors to explore interacting with interfaces on other peoples bodies. This type of expressive on-body input is something that we have very little experience with and this will allow visitors to improve their intuitive understanding of such potential technologies.
 
 
-
 \section{Limitations and Future Work}
 While the sensor has a very high resolution along the pressure axis, the spatial resolution is limited by the materials and sensing approach. The minimum spacing between individual sensing strips is constrained by the fabrics we use. We have not established the minimum size yet, but anticipate that there will be a material constrained limiting the resolution. Having said that, we have found that software interpolation works quite well, as usually more than one sensing strip is touched at once. We hope to further improve the software filtering by to using trajectory prediction algorithms such as Kalman filters used in the LumoSpheres project \cite{lumospheres}.
 
 The sensing approach also requires a large number of analog inputs on the micro-controller side. Currently the maximum resolution we can obtain is a matrix of 16 by 16. When we create larger fabric, they do not have a higher resolution, as they still use the 16 by 16 sensing strip design. We are current working on a dedicated micro-controller circuit to improve this.
 
 Finally, we are interested in adding actuation for haptic feedback. We have explored using previous experimentations such as BubbleWrap \cite{bubblewrap} or Shade Pixel \cite{shadepixel} however this added too much bulk to the fabric. While we still wish to add haptic feedback, more experimentation is required to decide on a best approach for this.
-
-
 
 
 \section{Conclusion}
