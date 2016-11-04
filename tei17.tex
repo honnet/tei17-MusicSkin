@@ -103,7 +103,7 @@ ACM XXX-X-XXXX-XXXX-X/XX/XX\\
 
 % Do not change the page size or page settings.
 \begin{abstract}
-We present an installation consisting of three soft, malleable fabric instruments. Visitors can use these instruments to explore sounds, collaboratively create soundscapes and music, as well as control the ambient lighting. Our soft instruments - musical skins - sense where they are touched and how much pressure is excerted on them. This is done using a novel sensing method consisting entirely of fabric components. In this extended abstract we discuss the sensing mechanism and describe the installation we envision our musical skins to be used in.
+We present an installation consisting of three soft, malleable fabric instruments. Visitors can use these instruments to explore sounds, collaboratively create soundscapes and music, as well as control the ambient lighting. Our soft instruments - musical skins - sense where they are touched and how much pressure is exerted on them. This is done using a novel sensing method consisting entirely of fabric components. In this extended abstract we discuss the sensing mechanism and describe the installation we envision our musical skins to be used in.
 \end{abstract}
 
 \keywords{\plainkeywords}
@@ -124,9 +124,9 @@ We present three different Musical Skins. These mimic the typical composition of
 \section{Related Work}
 Electronic textiles have recently received a significant amount of attention with the publication of public Jacquard \cite{jacquard}, however e-textiles and soft circuitry have a much longer history.
 
-Joanna Berzowska presented wearable e-textile fashion in 2004\cite{berzowska:04}, the dresses she designed retained a 'memory' of intimite experiences of the wearar. Berzowska also demonstrated fabric as an output medium in 2004 \cite{berzowska:05} , with a canvas artwork that slowly changed color.
+Joanna Berzowska presented wearable e-textile fashion in 2004\cite{berzowska:04}, the dresses she designed retained a 'memory' of intimate experiences of the wearer. Berzowska also demonstrated fabric as an output medium in 2004 \cite{berzowska:05} , with a canvas artwork that slowly changed color.
 
-Hannah Perner Wilson published an overview of soft fabric sensors in 2009 \cite{perner-wilson:09} and has since expanded on that work \cite{perner-wilson:10}.  She is currently maintaining an archive of soft textile sensors\footnote{\url{http://www.kobakant.at/DIY}}.
+Hannah Perner Wilson published an overview of soft fabric sensors in 2009 \cite{perner-wilson:09} and has since expanded on that work \cite{perner-wilson:10}. She is currently maintaining an archive of soft textile sensors\footnote{\url{http://www.kobakant.at/DIY}}.
 
 Similar resistive sensing solutions to those used by Musical Skins are used as rapid-prototyping methods. Some of these methods have been documented by David Holman \cite{holman:14, holman:11}.
 
@@ -169,13 +169,13 @@ To detect position of touch points, we measure the resistance between all strips
 \end{figure}
 
 The conductive fabric used is made by stratex \footnote{\url{http://statex.de}} but there are many affordable alternatives available.
-The piezoresistive textile used for now is made by Eeonyx\footnote{\url{http://eeonyx.com}} and has a resistance of 20K ohms per square.  While the material is expensive, it allows for detailed measurement range and a fairly good power consumption compared to other available resistive materials such as velostat\footnote{\url{http://www.lessemf.com/plastic.html}}.
+The piezoresistive textile used for now is made by Eeonyx\footnote{\url{http://eeonyx.com}} and has a resistance of 20K ohms per square. While the material is expensive, it allows for detailed measurement range and a fairly good power consumption compared to other available resistive materials such as Velostat\footnote{\url{http://www.lessemf.com/plastic.html}}.
 
 
 \subparagraph{Electronics}
 A simple voltage divider allows measuring this resistance, but we need a matrix to measure all the possible pressure points.
 This is done by sequentially pulling each power line high, and measured the voltage by column, in a nested loop.
-Figure \ref{fig:matrix} shows an overview of a 4 x 4  variable resistor matrix is connected (note that our system has a 16 x 16 resolution).
+Figure \ref{fig:matrix} shows an overview of a 4 x 4 variable resistor matrix is connected (note that our system has a 16 x 16 resolution).
 
 \begin{figure}
     \centering
@@ -188,11 +188,11 @@ Figure \ref{fig:matrix} shows an overview of a 4 x 4  variable resistor matrix i
 \subsection{Sensor Control}
 \subparagraph{Microcontroller}
 
-We use a Teensy 3.x\footnote{\url{http://pjrc.com/teensy}} to sample the voltages of the sensor. Due to the large number of analog inputs the Teensy allows us to read all  16 voltages without adding any external hardware.
+We use a Teensy 3.x\footnote{\url{http://pjrc.com/teensy}} to sample the voltages of the sensor. Due to the large number of analog inputs the Teensy allows us to read all 16 voltages without adding any external hardware.
 The measured voltages are converted and sent as data packets to a computer. Additionally, we use the analog output of the Teensy to generate audio based on the sampled voltages, this allows the Musical Skin to be used without tethering it to a computer.
 
 \subparagraph{Computer}
-When connected to a computer by USB, the raw data output is processed by an open frameworks\footnote{\url{http://openframeworks.cc}} program. We initially interpolate the raw position data as this improves the locelization of touches spanning multiple strips. We use blob detection algorithms from OpenCV\footnote{\url{http://opencv.org}} to detect the size and locations of touch points.  Each blob's centroid and pressure level can be sent to other applications such as Ableton Live using the OSC protocol. This enables the Musical Skin to control a music applications or interactive visualizations as will be demonstrated during the exhibition.
+When connected to a computer by USB, the raw data output is processed by an open frameworks\footnote{\url{http://openframeworks.cc}} program. We initially interpolate the raw position data as this improves the localization of touches spanning multiple strips. We use blob detection algorithms from OpenCV\footnote{\url{http://opencv.org}} to detect the size and locations of touch points. Each blob's centroid and pressure level can be sent to other applications such as Ableton Live using the OSC protocol. This enables the Musical Skin to control a music applications or interactive visualizations as will be demonstrated during the exhibition.
 
 
 \section{The Installation}
@@ -230,7 +230,7 @@ We have investigated using previous experimentations such as BubbleWrap \cite{bu
 \end{figure}
 
 \section{Conclusion}
-We suggest an installtion consisting of three soft fabric instruments which can be used by visitors to control the environment in the form of adapting sound and lighting. The primary intent of the fabric instruments is for collaboratively making music while exploring shapes, materiality and bodies. This can be done by draping the fabric over objects, folding and deforming the fabric, or wearing it on the body. The e-textile itself is open source and improves over similar sensing applications both in terms of robustness and resolution. We are submitting this installation both because we believe it matches the theme of this years art exhibition, and because we believe it will be an engaging experience for people interested in the topics of TEI.
+We suggest an installation consisting of three soft fabric instruments which can be used by visitors to control the environment in the form of adapting sound and lighting. The primary intent of the fabric instruments is for collaboratively making music while exploring shapes, materiality and bodies. This can be done by draping the fabric over objects, folding and deforming the fabric, or wearing it on the body. The e-textile itself is open source and improves over similar sensing applications both in terms of robustness and resolution. We are submitting this installation both because we believe it matches the theme of this years art exhibition, and because we believe it will be an engaging experience for people interested in the topics of TEI.
 
 
 % \balance{}
