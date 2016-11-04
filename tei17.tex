@@ -144,7 +144,7 @@ The other inspiration for this installation is TapMe \cite{tapme}, a wearable pe
 
 This textile sensor was designed with open source, collaborative and DIY development in mind (see fig. \ref{fig:tutorial}). The hardware and software designs are freely available and documented at \url{eTextile.org}. The design consists of the sensor which is completely made of fabric, a microcontroller, some basic circuitry that sends electrical signals through the fabric sensor and measures how they are influenced by the fabric sensor, and a computer application that interprets the data to pass it on as OSC messages.
 
-\begin{marginfigure}[-57ex]
+\begin{marginfigure}[-39ex]
   \begin{minipage}{\marginparwidth}
     \centering
     \includegraphics[width=0.9\marginparwidth]{figures/tutorial}
@@ -157,7 +157,7 @@ This textile sensor was designed with open source, collaborative and DIY develop
 The sensor consists of a grid of vertical (x) and horizontal (y) conductive textile strips (see fig. \ref{fig:inside}), seperated by a piezoelectric fabric. When the material is touched, the piezoelectrical material is compressed, decreasing its resistance.
 To detect position of touch points, we measure the resistance between all strips. If the resistance between two strips drops, we know that the intersection between these two strips is where the touch occurred. We can infer the preassure pressure intensity (z) of this touch, by the magnitude of the change in resistance. We call this combination of x, y and z measurement 3d pressure sensing.
 
-\begin{figure}[h!]
+\begin{figure}[!h]
     \centering
     \includegraphics[width=\columnwidth]{figures/inside}
     \caption{The vertical and horizontal stripes of conductive fabric,
@@ -175,7 +175,7 @@ Figure \ref{fig:matrix} shows an overview of a 4 x 4 variable resistor matrix is
 
 \begin{figure}
     \centering
-    \includegraphics[width=\columnwidth]{figures/matrix}
+    \includegraphics[width=0.75\columnwidth]{figures/matrix}
     \caption{Illustration of a part of the variable "resistor" matrix for 3d pressure sensing.}\label{fig:matrix}
 \end{figure}
 
