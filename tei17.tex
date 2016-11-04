@@ -223,7 +223,16 @@ Finally our instruments can be draped over bodies. This allows us to use our own
 
 
 \section{Limitations and Future Work}
-While the sensor has a very high resolution along the pressure axis, the spatial resolution is limited by the materials and sensing approach. The minimum spacing between individual sensing strips is constrained by the fabrics we use. We have not established the minimum size yet, but anticipate that there will be a material constrained limiting the resolution. Having said that, we have found that software interpolation works quite well, as usually more than one sensing strip is touched at once. We hope to further improve the software filtering by to using trajectory prediction algorithms such as Kalman filters used in the LumoSpheres project \cite{lumospheres}.
+While the sensor has a very high resolution along the pressure axis, the spatial resolution is limited by the materials and sensing approach. The minimum spacing between individual sensing strips is constrained by the fabrics we use. We have not established the minimum size yet, but anticipate that there will be a material constrained limiting the resolution.
+Having said that, we have found that software interpolation works quite well, as usually more than one sensing strip is touched at once. We hope to further improve the software filtering by to using trajectory prediction algorithms such as Kalman filters used in the LumoSpheres project \cite{lumospheres}.
+
+On the conductive fabric side, there are improvements possible using custom woven fabric with integrated conductive strips. It can increase the resolution but mostly the robustness and manufacturability. Figure \ref{fig:zebra_fabric} shows a first attempt at this.
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=\columnwidth]{figures/zebra_fabric}
+    \caption{The new custom made conductive fabric.}\label{fig:zebra_fabric}
+\end{figure}
 
 The sensing approach also requires a large number of analog inputs on the micro-controller side. Currently the maximum resolution we can obtain is a matrix of 16 by 16. When we create larger fabric, they do not have a higher resolution, as they still use the 16 by 16 sensing strip design. We are current working on a dedicated micro-controller circuit to improve this.
 
