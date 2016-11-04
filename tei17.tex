@@ -236,8 +236,14 @@ On the conductive fabric side, there are improvements possible using custom wove
 
 The sensing approach also requires a large number of analog inputs on the micro-controller side. Currently the maximum resolution we can obtain is a matrix of 16 by 16. When we create larger fabric, they do not have a higher resolution, as they still use the 16 by 16 sensing strip design. We are current working on a dedicated micro-controller circuit to improve this.
 
-Finally, we are interested in adding actuation for haptic feedback. We have explored using previous experimentations such as BubbleWrap \cite{bubblewrap} or Shade Pixel \cite{shadepixel} however this added too much bulk to the fabric. While we still wish to add haptic feedback, more experimentation is required to decide on a best approach for this.
+Finally, we are interested in adding actuation for haptic feedback. Different "analog" solutions were experimented using thick ink to infer finger position and evolution on the sensor (see \ref{fig:zoom}), but an active solution is currently tested further.
+We have investigated using previous experimentations such as BubbleWrap \cite{bubblewrap} or Shade Pixel \cite{shadepixel} however this added too much bulk to the fabric. While we still wish to add haptic feedback, more experimentation is required to decide on a best approach for this.
 
+\begin{figure}
+    \centering
+    \includegraphics[width=\columnwidth]{figures/zoom}
+    \caption{Illustration of an "analog" haptic feedback experimentation.}\label{fig:zoom}
+\end{figure}
 
 \section{Conclusion}
 We suggest an installtion consisting of three soft fabric instruments which can be used by visitors to control the environment in the form of adapting sound and lighting. The primary intent of the fabric instruments is for collaboratively making music while exploring shapes, materiality and bodies. This can be done by draping the fabric over objects, folding and deforming the fabric, or wearing it on the body. The e-textile itself is open source and improves over similar sensing applications both in terms of robustness and resolution. We are submitting this installation both because we believe it matches the theme of this years art exhibition, and because we believe it will be an engaging experience for people interested in the topics of TEI.
