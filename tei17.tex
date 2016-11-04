@@ -102,7 +102,7 @@ ACM XXX-X-XXXX-XXXX-X/XX/XX\\
 
 % Do not change the page size or page settings.
 \begin{abstract}
-We present an installation consisting of three soft, malleable fabric instruments. Visitors can use these instruments to explore sounds, collaboratively create soundscapes and music, as well as control the ambient lighting. Our soft instruments - musical skins - sense where they are touched and how much pressure is exerted on them (see figure 0). This is done using a novel sensing method consisting entirely of fabric components. In this extended abstract we discuss the sensing mechanism and describe the installation we envision our musical skins to be used in.
+We present an installation consisting of three soft, malleable fabric instruments. Visitors can use these instruments to explore sounds, collaboratively create soundscapes and music, as well as control the ambient lighting. Our soft instruments - musical skins - sense where they are touched and how much pressure is exerted on them (see fig. 0). This is done using a novel sensing method consisting entirely of fabric components. In this extended abstract we discuss the sensing mechanism and describe the installation we envision our musical skins to be used in.
 \end{abstract}
 
 \keywords{\plainkeywords}
@@ -127,13 +127,13 @@ Joanna Berzowska presented wearable e-textile fashion in 2004\cite{berzowska:04}
 
 Hannah Perner Wilson published an overview of soft fabric sensors in 2009 \cite{perner-wilson:09} and has since expanded on that work \cite{perner-wilson:10}. Along with Mika Satomi, they maintain an archive of electronic textile experimentations\cite{kobakant}.
 
-Similar resistive sensing solutions to those used by Musical Skins are used as rapid-prototyping methods. Some of these methods have been documented by David Holman \cite{holman:14, holman:11}.
+Similar resistive sensing solutions to ours are used as rapid-prototyping methods. Some of these methods have been documented by David Holman \cite{holman:14, holman:11}.
 
 Our musical skins add additinal expressive modaleties over typical keyed input devices. This method has also been explored by others, for example, Seabord and Linnstrument \cite{seaboard, linnstrument} add preassure and position sensing to the individual 'keys' of a keyboard. Lambdoma and Omnichord are instruments that, like our Skins have explored two dimensional key layouts \cite{lambdoma, omnichord}.
 
 
 \section{History}
-The technology used in our textile instruments is based on the work by Maurin Donneaud \cite{donneaud}. Starting in 2005, he was researching the use of textiles as an intuitive way of interact with computers. From the beginning, his aim was to develop technologies with artistic applications: playing music, creating interactive visualizations etc. To achieve this, the tactile properties and affordances of the interface were a primary focus.
+The technology used in our textile instruments is based on the work by Maurin Donneaud \cite{donneaud}. Starting in 2005, he was researching the use of textiles as an intuitive way to interact with computers. From the beginning, his aim was to develop technologies with artistic applications: music, visualizations etc. To achieve this, the tactile properties and affordances of the interface were a primary focus.
 
 Donneaud's sensor is the result of a reflection on the composition and the interpretation of electronic music. A crossover between the world of weaving and electronics. He opted to use textiles, to give a sensual and intuitive dimension to controllers used to play electronic music. Going beyond its original purpose of a musical instrument, his textile sensor acts as an artificial skin which can provide objects with a sense of touch.
 
@@ -142,7 +142,7 @@ The other inspiration for this installation is TapMe \cite{tapme}, a wearable pe
 
 \section{Implementation}
 
-This textile sensor was designed with open source, collaborative and DIY development in mind (see figure \ref{fig:tutorial}). The hardware and software designs are freely available and documented at \url{eTextile.org}. The design consists of the sensor which is completely made of fabric, a microcontroller, some basic circuitry that sends electrical signals through the fabric sensor and measures how they are influenced by the fabric sensor, and a computer application that interprets the data to pass it on as OSC messages.
+This textile sensor was designed with open source, collaborative and DIY development in mind (see fig. \ref{fig:tutorial}). The hardware and software designs are freely available and documented at \url{eTextile.org}. The design consists of the sensor which is completely made of fabric, a microcontroller, some basic circuitry that sends electrical signals through the fabric sensor and measures how they are influenced by the fabric sensor, and a computer application that interprets the data to pass it on as OSC messages.
 
 \begin{marginfigure}[-57ex]
   \begin{minipage}{\marginparwidth}
@@ -152,9 +152,9 @@ This textile sensor was designed with open source, collaborative and DIY develop
   \end{minipage}
 \end{marginfigure}
 
-\subsection{Fabric Sensor}
+\subsection{Hardware}
 \subparagraph{Textiles}
-The sensor consists of a grid of vertical (x) and horizontal (y) conductive textile strips (see figure \ref{fig:inside}), seperated by a piezoelectric fabric. When the material is touched, the piezoelectrical material is compressed, decreasing its resistance.
+The sensor consists of a grid of vertical (x) and horizontal (y) conductive textile strips (see fig. \ref{fig:inside}), seperated by a piezoelectric fabric. When the material is touched, the piezoelectrical material is compressed, decreasing its resistance.
 To detect position of touch points, we measure the resistance between all strips. If the resistance between two strips drops, we know that the intersection between these two strips is where the touch occurred. We can infer the preassure pressure intensity (z) of this touch, by the magnitude of the change in resistance. We call this combination of x, y and z measurement 3d pressure sensing.
 
 \begin{figure}[h!]
@@ -180,8 +180,7 @@ Figure \ref{fig:matrix} shows an overview of a 4 x 4 variable resistor matrix is
 \end{figure}
 
 
-
-\subsection{Sensor Control}
+\subsection{Software}
 \subparagraph{Microcontroller}
 
 We use a Teensy 3.x\footnote{\url{http://pjrc.com/teensy}} to sample the voltages of the sensor. Due to the large number of analog inputs the Teensy allows us to read all 16 voltages without adding any external hardware.
@@ -197,39 +196,40 @@ The installation can be adopted to the constraints and opportunities of the spac
 Visitors will discover that different instruments have different sound qualities. Some instruments will allow for expressive pressure based interactions triggering ambient pads and soundscapes, others can be played much like a harmonic keyboard. Others again will trigger one-shot sounds, enabling percussive sounds and drumming. The soft malleable nature of the instruments allows for interesting explorations not possible with conventional interfaces. For example, while a single touch typically would trigger a single sound or drum hit, if the instrument is folded, visitors can create custom polyphonic soundscapes. Visitors can explore rubbing, rolling, crumbling to create chaotic or non-deterministic sounds, or lay it out flat on an even surface for high-detail interaction.
 
 Our instruments can be draped over objects to create custom shaped instruments. We will bring a small number of wooden and cardboard shape-primitives that can be used for this purpose. An e-textile might be wrapped around a cylindrical object for providing a better grip, or laid out over a concave bowl to allow faster motion between different areas. Different shapes provide different musical affordances.
-
 Finally our instruments can be draped over bodies. This allows us to use our own bodies as instruments: we can amplify body percussion with additional sounds, or we can hug each other to create soundscapes. The ability to drape these instruments over our body allows us to explore what interactive tattoos might feel like, or what other methods of input in soft fabric devices might feel like on the body. Finally it also allows visitors to explore interacting with interfaces on other peoples bodies. This type of expressive on-body input is something that we have very little experience with and this will allow visitors to improve their intuitive understanding of such potential technologies.
 
 
 \section{Limitations and Future Work}
 
+While the sensor has a very high resolution along the pressure axis, the spatial resolution is limited by the materials and sensing approach. The minimum spacing between individual sensing strips is constrained by the fabrics we use. We have not established the minimum size yet, but anticipate that there will be a material constrained limiting the resolution.
+Having said that, we have found that software interpolation works quite well, as usually more than one sensing strip is touched at once.
+
+We plan to improve blob tracking, by to using trajectory prediction algorithms such as Kalman filters as used in the LumoSpheres project \cite{lumospheres}, and then by embedding it directly in the microcontroller to allow sending TUIO points\footnote{Tangible User Interface: \url{http://tuio.org}} (wirelessly or not).
+On the conductive fabric side, there are improvements possible using custom woven fabric with integrated conductive strips. Doing so may increase the sensors resolution and robustness. Figure \ref{fig:zebra_fabric} shows a first attempt at this.
+
 \begin{figure}[!h]
     \centering
     \includegraphics[width=\columnwidth]{figures/zebra_fabric}
-    \caption{The new custom made conductive fabric.}\label{fig:zebra_fabric}
+    \caption{The latest custom conductive fabric experimentation.}\label{fig:zebra_fabric}
 \end{figure}
-
-While the sensor has a very high resolution along the pressure axis, the spatial resolution is limited by the materials and sensing approach. The minimum spacing between individual sensing strips is constrained by the fabrics we use. We have not established the minimum size yet, but anticipate that there will be a material constrained limiting the resolution.
-Having said that, we have found that software interpolation works quite well, as usually more than one sensing strip is touched at once. We hope to further improve the software filtering by to using trajectory prediction algorithms such as Kalman filters used in the LumoSpheres project \cite{lumospheres}.
-
-On the conductive fabric side, there are improvements possible using custom woven fabric with integrated conductive strips. Doing so may increase the sensors resolution and robustness. Figure \ref{fig:zebra_fabric} shows a first attempt at this.
 
 The sensing approach also requires a large number of analog inputs on the micro-controller side. Currently the maximum resolution we can obtain is a matrix of 16 by 16. When we create larger fabric, they do not have a higher resolution, as they still use the 16 by 16 sensing strip design. We are current working on a dedicated micro-controller circuit to improve this.
 
-Finally, we are interested in adding actuation for haptic feedback. We have experimented with "analog" solutions using thick ink to infer finger position and motion on the sensor (see \ref{fig:zoom}), but we hope to find an active solution in the future.
-We have investigated using previous experimentations such as BubbleWrap \cite{bubblewrap} or Shade Pixel \cite{shadepixel} however this added too much bulk to the fabric. While we still wish to add haptic feedback, more experimentation is required to decide on a best approach for this.
-
-\begin{figure}[h!]
+\begin{figure}[!h]
     \centering
     \includegraphics[width=\columnwidth]{figures/zoom}
-    \caption{Illustration of an "analog" haptic feedback experimentation.}\label{fig:zoom}
+    \caption{Illustration of an "analog" haptic feedback test.}\label{fig:zoom}
 \end{figure}
+
+Finally, we are working on adding haptic feedback, so we started with "analog" solutions using thick ink to infer finger position and motion on the sensor (see fig. \ref{fig:zoom}), but we hope to find a thin and active solution in the future.
+We have investigated previous experimentations such as BubbleWrap \cite{bubblewrap} or Shade Pixel \cite{shadepixel} but their approach is too bulky for fabric. If we want to ensure natural wearability, more experimentation is required to decide on the best approach.
+
 
 \section{Conclusion}
 We suggest an installation consisting of three soft fabric instruments which can be used by visitors to control the environment in the form of adapting sound and lighting. The primary intent of the fabric instruments is for collaboratively making music while exploring shapes, materiality and bodies. This can be done by draping the fabric over objects, folding and deforming the fabric, or wearing it on the body. The e-textile itself is open source and improves over similar sensing applications both in terms of robustness and resolution. We are submitting this installation both because we believe it matches the theme of this years art exhibition, and because we believe it will be an engaging experience for people interested in the topics of TEI.
 
 
-% \balance{}
+\balance{}
 
 \bibliographystyle{SIGCHI-Reference-Format}
 \bibliography{tei17}
