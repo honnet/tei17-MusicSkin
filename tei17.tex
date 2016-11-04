@@ -32,7 +32,7 @@ ACM XXX-X-XXXX-XXXX-X/XX/XX\\
 \def\plainkeywords{Musical Interface, e-Textile, soft circuits, on-body interaction}
 \def\plaingeneralterms{Documentation, Standardization}
 
-\title{Musical Skins: Fabric Interfaces for for Expressive Music Control}
+\title{Musical Skins: Fabric Interfaces for Expressive Music Control}
 
 \numberofauthors{3}
 % Notice how author names are alternately typesetted to appear ordered
@@ -158,7 +158,7 @@ This textile sensor was designed with open source collaborative development in m
 
 \subsection{Fabric Sensor}
 \subparagraph{Textiles}
-The sensor consists of a grid of vertical (x) and horizontal (y) conductive textile strips (see figure \ref{fig:inside}), seperated by a piezoelectric fabric. When the material is touched, the piezoelectrical material is compressed, decreasing its resistance. 
+The sensor consists of a grid of vertical (x) and horizontal (y) conductive textile strips (see figure \ref{fig:inside}), seperated by a piezoelectric fabric. When the material is touched, the piezoelectrical material is compressed, decreasing its resistance.
 To detect position of touch points, we measure the resistance between all strips. If the resistance between two strips drops, we know that the intersection between these two strips is where the touch occurred. We can infer the preassure pressure intensity (z) of this touch, by the magnitude of the change in resistance. We call this combination of x, y and z measurement 3d pressure sensing.
 
 \begin{figure}[h!]
@@ -188,8 +188,8 @@ Figure \ref{fig:matrix} shows an overview of a 4 x 4  variable resistor matrix i
 \subsection{Sensor Control}
 \subparagraph{Microcontroller}
 
-We use a Teensy 3.x\footnote{\url{http://pjrc.com/teensy}} to sample the voltages of the sensor. Due to the large number of analog inputs the Teensy allows us to read all  16 voltages without adding any external hardware. 
-The measured voltages are converted and sent as data packets to a computer. Additionally, we use the analog output of the Teensy to generate audio based on the sampled voltages, this allows the Musical Skin to be used without tethering it to a computer. 
+We use a Teensy 3.x\footnote{\url{http://pjrc.com/teensy}} to sample the voltages of the sensor. Due to the large number of analog inputs the Teensy allows us to read all  16 voltages without adding any external hardware.
+The measured voltages are converted and sent as data packets to a computer. Additionally, we use the analog output of the Teensy to generate audio based on the sampled voltages, this allows the Musical Skin to be used without tethering it to a computer.
 
 \subparagraph{Computer}
 When connected to a computer by USB, the raw data output is processed by an open frameworks\footnote{\url{http://openframeworks.cc}} program. We initially interpolate the raw position data as this improves the locelization of touches spanning multiple strips. We use blob detection algorithms from OpenCV\footnote{\url{http://opencv.org}} to detect the size and locations of touch points.  Each blob's centroid and pressure level can be sent to other applications such as Ableton Live using the OSC protocol. This enables the Musical Skin to control a music applications or interactive visualizations as will be demonstrated during the exhibition.
