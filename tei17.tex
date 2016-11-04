@@ -149,10 +149,6 @@ Donneaud's sensor is the result of a reflection on the composition and the inter
 The other inspiration for this installation is TapMe, a wearable percussive kit designed by Cedric Honnet. Designed in Paris in 2011, TapMe supports beat-boxers and rappers in the expansion of their expressivity by amplifying body percussion. A performer wearing TapMe can create different beats and drum hits by hitting thin drum-triggers worn on their body.
 
 
-
-
-
-
 \section{Implementation}
 
 This textile sensor was designed with open source collaborative development in mind. The hardware and software are entirely available and documented on \url{eTextile.org}.
@@ -170,10 +166,11 @@ This textile sensor was designed with open source collaborative development in m
   \end{minipage}
 \end{marginfigure}
 
+
 \subparagraph{Textile}
 
-To detect position of touch points, the conductive textile is sliced both in vertical (x) and horizontal (y) strips (see Figure \ref{fig:inside}).
-To measure the pressure intensities (z), the sensor uses conductive and piezoresistive textiles (see explanations in next subsection).
+To detect position of touch points, conductive textile is used in in vertical (x) and horizontal (y) strips (see figure \ref{fig:inside}).
+To measure the pressure intensities (z), the sensor uses piezoresistive textiles. We call 3d pressure sensing the combination of x, y and z measurement.
 
 \begin{figure}[h!]
     \centering
@@ -182,14 +179,16 @@ To measure the pressure intensities (z), the sensor uses conductive and piezores
     and the resistive fabric in the middle (dark grey).}\label{fig:inside}
 \end{figure}
 
-The piezoresistive textile used for now is made by Eeonyx\footnote{\url{http://eeonyx.com}}, its resistance of 20K ohms per square give a good pressure range and power consumption compare to other possible resistive layers such as velostat\footnote{\url{http://www.lessemf.com/plastic.html}}.
+The conductive fabric used is made by stratex \footnote{\url{http://statex.de}} but there are many affordable alternatives available.
+The piezoresistive textile used for now is made by Eeonyx\footnote{\url{http://eeonyx.com}}. Its price is not realistic for mass manufacture but its resistance of 20K ohms per square allows a good pressure measurement range and a fairly good power consumption compared to other available resistive materials such as velostat\footnote{\url{http://www.lessemf.com/plastic.html}}.
 
 
 \subparagraph{Electronics}
 
-Teensy board
-piezoresistivity picture
-voltage divider
+As mentioned before, the pressure is measured using piezoresistive textile as a variable resistor. The picture on figure \ref{fig:piezoresistivity} illustrates the variable conductivity depending on the molecular density of the material.
+A simple voltage divider allows measuring this resistance, but we need a matrix to measure all the possible pressure points.
+To measure these, each row power line is turned on sequentially, and each voltage is sequentially measured by column, in a nested loop.
+Figure \ref{fig:matrix} shows an overview of how the variable resistor matrix made out of resistive fabric is connected, but our system has a 16 x 16 resolution.
 
 \begin{figure}
     \centering
@@ -202,19 +201,15 @@ voltage divider
 
 \subparagraph{Microcontroller}
 
-performs measures
-send data packets
-play music
+The board used to perform the measures is a Teensy 3.x\footnote{\url{http://pjrc.com/teensy}} for the moment, its great amount of analog inputs allows reading all the 16 voltages without adding any external hardware. Its cost is not optimal yet and a custom -thus cheaper- version is being made.
+The measured voltages are converted and sent as data packets to a computer, but we also generate music on board as the analog output of the Teensy allows is with a good quality.
 
 \subparagraph{Computer}
 
-visualization
-blob detection
-OSC control
-
-
-
-
+Connected by USB, the sensor sends raw data that is processed by an open frameworks\footnote{\url{http://openframeworks.cc}} program.
+An interpolation allows increasing the resolution in order to allow blob detection using OpenCV\footnote{\url{http://opencv.org}} algorithms.
+Figure 0 shows a visualization while allowing a single pressure on the textile sensor, but up to 256 pressures can be measured.
+Each blob's centroid can be sent using the OSC protocol to control a music software or any visualization, it will be demonstrated during the exhibition.
 
 
 \section{The Installation}
